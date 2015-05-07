@@ -10,8 +10,10 @@ that allows Ubuntu "pop-up" notifications(`notify-send`) when a Pomodoro (25min 
 
 ## Usage
 
-    #~/.thymerc
-    require 'ThymeUbuntuNotification'
+Change `~/.thymerc` so that you use the lib.
+
+    # ~/.thymerc
+    require 'thyme_ubuntu_notification'
     use ThymeUbuntuNotification
 
     # ...or if you want different text
