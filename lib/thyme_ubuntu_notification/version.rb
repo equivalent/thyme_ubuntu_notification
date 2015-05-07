@@ -1,3 +1,3 @@
-module ThymeUbuntuNotification
+class ThymeUbuntuNotification
   VERSION = "0.1.0"
 end

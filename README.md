@@ -1,34 +1,28 @@
 # ThymeUbuntuNotification
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/thyme_ubuntu_notification`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Is a plugin for [thyme](https://github.com/hughbien/thyme) gem (Pomodoro timer app)
+that allows Ubuntu "pop-up" notifications(`notify-send`) when a Pomodoro (25min cycle) ends.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'thyme_ubuntu_notification'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
+    # $ gem install thyme
     $ gem install thyme_ubuntu_notification
 
 ## Usage
 
-TODO: Write usage instructions here
+    #~/.thymerc
+    require 'ThymeUbuntuNotification'
+    use ThymeUbuntuNotification
 
-## Development
+    # ...or if you want different text
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+    use ThymeUbuntuNotification, end_text: "Go take a break!", start_text: "Let's do this!"
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Supported Ubuntu/Linux Versions
+
+Works on any Linux that supports `notify-send` command, test it with `$ notify-send 'Hello world'`
+
+Durring the time I wrote this plugin I was using Ubuntu 14.04 (works)
 
 ## Contributing
 
